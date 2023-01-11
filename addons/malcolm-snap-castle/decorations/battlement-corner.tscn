@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://addons/malcolm-snap-castle/meshes/battlement-corner.tscn" type="PackedScene" id=1]
+
+[sub_resource type="ConvexPolygonShape" id=1]
+points = PoolVector3Array( -0.5, -1.7586, -0.40001, -0.40001, -1.79049, -0.290623, -0.40001, -0.500191, 1, -0.5, -0.458641, 0.899863, -0.5, 1.39983, -0.40001, -0.40001, -1.7586, -0.5, -0.290623, -1.79049, -0.40001, 0.890906, -0.500191, 1, -0.40001, 1.39983, 1, -0.5, 1.39983, 0.899863, -0.40001, 1.49968, -0.40001, -0.40001, 1.39983, -0.5, 0.899863, -0.458641, -0.5, 1, -0.500191, -0.40001, 1, -0.500191, 0.890906, 0.891347, 1.39983, 1, -0.40001, 1.49968, 0.899863, 0.899863, 1.49968, -0.40001, 0.899863, 1.39983, -0.5, 1, 1.39983, -0.40001, 1, 1.39983, 0.891347, 0.899863, 1.49968, 0.899863 )
+
+[node name="BattlementCorner" type="StaticBody"]
+
+[node name="BattlementCorner" parent="." instance=ExtResource( 1 )]
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 1 )

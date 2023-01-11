@@ -1,0 +1,205 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://addons/malcolm-snap-castle/meshes/block-half.tscn" type="PackedScene" id=1]
+[ext_resource path="res://addons/malcolm-snap-castle/meshes/ceiling.tscn" type="PackedScene" id=2]
+[ext_resource path="res://addons/malcolm-snap-castle/meshes/block.tscn" type="PackedScene" id=3]
+[ext_resource path="res://addons/malcolm-snap-castle/meshes/hall-t.tscn" type="PackedScene" id=4]
+[ext_resource path="res://addons/malcolm-snap-castle/meshes/hall.tscn" type="PackedScene" id=5]
+[ext_resource path="res://addons/malcolm-snap-castle/meshes/ramp-high.tscn" type="PackedScene" id=6]
+[ext_resource path="res://addons/malcolm-snap-castle/meshes/hall-x.tscn" type="PackedScene" id=7]
+[ext_resource path="res://addons/malcolm-snap-castle/meshes/hall-w.tscn" type="PackedScene" id=8]
+[ext_resource path="res://addons/malcolm-snap-castle/meshes/ramp-low.tscn" type="PackedScene" id=9]
+[ext_resource path="res://addons/malcolm-snap-castle/meshes/hall-l.tscn" type="PackedScene" id=10]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 2, 2, 2 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 2, 1, 2 )
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 2, 0.25, 2 )
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 2, 0.5, 2 )
+
+[sub_resource type="BoxShape" id=5]
+extents = Vector3( 2, 1.5, 0.5 )
+
+[sub_resource type="BoxShape" id=6]
+extents = Vector3( 2, 0.5, 2 )
+
+[sub_resource type="BoxShape" id=26]
+extents = Vector3( 0.5, 1.5, 1.5 )
+
+[sub_resource type="BoxShape" id=25]
+extents = Vector3( 0.5, 1.5, 0.5 )
+
+[sub_resource type="BoxShape" id=8]
+extents = Vector3( 2, 0.5, 0.5 )
+
+[sub_resource type="BoxShape" id=9]
+extents = Vector3( 0.875, 0.5, 0.5 )
+
+[sub_resource type="ConvexPolygonShape" id=10]
+points = PoolVector3Array( -2, 4, 2, -2, 4, -2, -2, 0, 2, 2, 2, 2, 2, 2, -2, -2, 0, -2, 2, 0, 2, 2, 0, -2 )
+
+[sub_resource type="ConvexPolygonShape" id=11]
+points = PoolVector3Array( -2, 0, -2, -2, 2, -2, 2, 0, -2, -2, 0, 2, -2, 2, 2, 2, 0, 2 )
+
+[node name="CastleMeshLibraryScene" type="Spatial"]
+
+[node name="Block" parent="." instance=ExtResource( 3 )]
+visible = false
+
+[node name="StaticBody" type="StaticBody" parent="Block"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Block/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
+shape = SubResource( 1 )
+
+[node name="BlockHalf" parent="." instance=ExtResource( 1 )]
+visible = false
+
+[node name="StaticBody" type="StaticBody" parent="BlockHalf"]
+
+[node name="CollisionShape" type="CollisionShape" parent="BlockHalf/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+shape = SubResource( 2 )
+
+[node name="Ceiling" parent="." instance=ExtResource( 2 )]
+visible = false
+
+[node name="StaticBody" type="StaticBody" parent="Ceiling"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Ceiling/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.75, 0 )
+shape = SubResource( 3 )
+
+[node name="Hall" parent="." instance=ExtResource( 5 )]
+visible = false
+
+[node name="StaticBody" type="StaticBody" parent="Hall"]
+
+[node name="CollisionShapeTop" type="CollisionShape" parent="Hall/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.5, 0 )
+shape = SubResource( 4 )
+
+[node name="CollisionShapeWall1" type="CollisionShape" parent="Hall/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 1.5 )
+shape = SubResource( 5 )
+
+[node name="CollisionShapeWall2" type="CollisionShape" parent="Hall/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -1.5 )
+shape = SubResource( 5 )
+
+[node name="HallL" parent="." instance=ExtResource( 10 )]
+
+[node name="StaticBody" type="StaticBody" parent="HallL"]
+
+[node name="CollisionShapeTop" type="CollisionShape" parent="HallL/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.5, 0 )
+shape = SubResource( 6 )
+
+[node name="CollisionShapeWall1" type="CollisionShape" parent="HallL/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 1.5 )
+shape = SubResource( 5 )
+
+[node name="CollisionShapeWall2" type="CollisionShape" parent="HallL/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 1.5, -0.5 )
+shape = SubResource( 26 )
+
+[node name="CollisionShapeCorner1" type="CollisionShape" parent="HallL/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 1.5, -1.5 )
+shape = SubResource( 25 )
+
+[node name="HallT" parent="." instance=ExtResource( 4 )]
+visible = false
+
+[node name="StaticBody" type="StaticBody" parent="HallT"]
+
+[node name="CollisionShapeTop" type="CollisionShape" parent="HallT/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.5, 0 )
+shape = SubResource( 6 )
+
+[node name="CollisionShapeWall1" type="CollisionShape" parent="HallT/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 1.5 )
+shape = SubResource( 5 )
+
+[node name="CollisionShapeCorner1" type="CollisionShape" parent="HallT/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 1.5, -1.5 )
+shape = SubResource( 25 )
+
+[node name="CollisionShapeCorner2" type="CollisionShape" parent="HallT/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 1.5, -1.5 )
+shape = SubResource( 25 )
+
+[node name="HallW" parent="." instance=ExtResource( 8 )]
+visible = false
+
+[node name="StaticBody" type="StaticBody" parent="HallW"]
+
+[node name="CollisionShapeTop" type="CollisionShape" parent="HallW/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.5, 0 )
+shape = SubResource( 6 )
+
+[node name="CollisionShapeWall1" type="CollisionShape" parent="HallW/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -1.5 )
+shape = SubResource( 5 )
+
+[node name="CollisionShapeWall2A" type="CollisionShape" parent="HallW/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 1.5 )
+shape = SubResource( 8 )
+
+[node name="CollisionShapeWall2B" type="CollisionShape" parent="HallW/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 1.5 )
+shape = SubResource( 8 )
+
+[node name="CollisionShapeWall2C" type="CollisionShape" parent="HallW/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.125, 1.5, 1.5 )
+shape = SubResource( 9 )
+
+[node name="CollisionShapeWall2D" type="CollisionShape" parent="HallW/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.125, 1.5, 1.5 )
+shape = SubResource( 9 )
+
+[node name="HallX" parent="." instance=ExtResource( 7 )]
+visible = false
+
+[node name="StaticBody" type="StaticBody" parent="HallX"]
+
+[node name="CollisionShapeTop" type="CollisionShape" parent="HallX/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.5, 0 )
+shape = SubResource( 6 )
+
+[node name="CollisionShapeCorner1" type="CollisionShape" parent="HallX/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 1.5, -1.5 )
+shape = SubResource( 25 )
+
+[node name="CollisionShapeCorner2" type="CollisionShape" parent="HallX/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 1.5, 1.5 )
+shape = SubResource( 25 )
+
+[node name="CollisionShapeCorner3" type="CollisionShape" parent="HallX/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 1.5, -1.5 )
+shape = SubResource( 25 )
+
+[node name="CollisionShapeCorner4" type="CollisionShape" parent="HallX/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 1.5, 1.5 )
+shape = SubResource( 25 )
+
+[node name="RampHigh" parent="." instance=ExtResource( 6 )]
+visible = false
+
+[node name="StaticBody" type="StaticBody" parent="RampHigh"]
+
+[node name="CollisionShape" type="CollisionShape" parent="RampHigh/StaticBody"]
+shape = SubResource( 10 )
+
+[node name="RampLow" parent="." instance=ExtResource( 9 )]
+visible = false
+
+[node name="StaticBody" type="StaticBody" parent="RampLow"]
+
+[node name="CollisionShape" type="CollisionShape" parent="RampLow/StaticBody"]
+shape = SubResource( 11 )
