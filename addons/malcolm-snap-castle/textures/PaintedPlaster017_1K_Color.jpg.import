@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/Planks012_1K_Color.jpg-2129d3eb0f16aeedab6d572bffac6e46.s3tc.stex"
-path.etc="res://.import/Planks012_1K_Color.jpg-2129d3eb0f16aeedab6d572bffac6e46.etc.stex"
+path.s3tc="res://.import/PaintedPlaster017_1K_Color.jpg-86faf73f6b873dee866b1addf9b450d5.s3tc.stex"
+path.etc="res://.import/PaintedPlaster017_1K_Color.jpg-86faf73f6b873dee866b1addf9b450d5.etc.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://addons/malcolm-snap-castle/textures/Planks012_1K_Color.jpg"
-dest_files=[ "res://.import/Planks012_1K_Color.jpg-2129d3eb0f16aeedab6d572bffac6e46.s3tc.stex", "res://.import/Planks012_1K_Color.jpg-2129d3eb0f16aeedab6d572bffac6e46.etc.stex" ]
+source_file="res://addons/malcolm-snap-castle/textures/PaintedPlaster017_1K_Color.jpg"
+dest_files=[ "res://.import/PaintedPlaster017_1K_Color.jpg-86faf73f6b873dee866b1addf9b450d5.s3tc.stex", "res://.import/PaintedPlaster017_1K_Color.jpg-86faf73f6b873dee866b1addf9b450d5.etc.stex" ]
 
 [params]
 
