@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/UVmapGrid.jpg-44b6c9b3993e99a060bdd66eda7de64f.stex"
+path="res://.import/godot.png-531608b26336d2d7a96aa1d82f3bc177.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/malcolm-snap-castle/textures/UVmapGrid.jpg"
-dest_files=[ "res://.import/UVmapGrid.jpg-44b6c9b3993e99a060bdd66eda7de64f.stex" ]
+source_file="res://img/godot.png"
+dest_files=[ "res://.import/godot.png-531608b26336d2d7a96aa1d82f3bc177.stex" ]
 
 [params]
 

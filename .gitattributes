@@ -1,0 +1,9 @@
+# Set line endings
+* text=auto eol=lf
+
+# Only include the addons folder when downloading from the Asset Library.
+/**        export-ignore
+/addons    !export-ignore
+/addons/** !export-ignore
+*.blend    export_ignore
+*.blend1   export_ignore
