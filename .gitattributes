@@ -5,5 +5,3 @@
 /**        export-ignore
 /addons    !export-ignore
 /addons/** !export-ignore
-*.blend    export_ignore
-*.blend1   export_ignore
