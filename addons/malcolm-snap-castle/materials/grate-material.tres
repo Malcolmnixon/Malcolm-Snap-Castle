@@ -4,6 +4,6 @@
 
 [resource]
 params_use_alpha_scissor = true
-params_alpha_scissor_threshold = 0.98
+params_alpha_scissor_threshold = 0.25
 albedo_texture = ExtResource( 1 )
 uv1_scale = Vector3( 3, 3, 3 )
