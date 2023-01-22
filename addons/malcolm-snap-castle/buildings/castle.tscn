@@ -1,10 +1,14 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://addons/malcolm-snap-castle/meshlibrary/snap-castle.meshlib" type="MeshLibrary" id=1]
+[ext_resource path="res://addons/malcolm-snap-castle/decorations/large_door.tscn" type="PackedScene" id=2]
+[ext_resource path="res://addons/malcolm-snap-castle/decorations/door.tscn" type="PackedScene" id=3]
 
 [node name="Castle" type="Spatial"]
 
-[node name="GridMap1" type="GridMap" parent="."]
+[node name="Level1" type="Spatial" parent="."]
+
+[node name="GridMap" type="GridMap" parent="Level1"]
 mesh_library = ExtResource( 1 )
 use_in_baked_light = true
 cell_size = Vector3( 1, 4, 1 )
@@ -19,8 +23,10 @@ __meta__ = {
 "_editor_floor_": Vector3( 0, 0, 0 )
 }
 
-[node name="GridMap2" type="GridMap" parent="."]
+[node name="Level2" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0 )
+
+[node name="GridMap" type="GridMap" parent="Level2"]
 mesh_library = ExtResource( 1 )
 use_in_baked_light = true
 cell_size = Vector3( 1, 4, 1 )
@@ -35,8 +41,21 @@ __meta__ = {
 "_editor_floor_": Vector3( 0, 0, 0 )
 }
 
-[node name="GridMap3" type="GridMap" parent="."]
+[node name="Doors" type="Spatial" parent="Level2"]
+
+[node name="LargeDoorLeft" parent="Level2/Doors" instance=ExtResource( 2 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, 0, 14 )
+opened = true
+
+[node name="LargeDoorRight" parent="Level2/Doors" instance=ExtResource( 2 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 1, 0, 14 )
+open_angle = -80.0
+opened = true
+
+[node name="Level3" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8, 0 )
+
+[node name="GridMap" type="GridMap" parent="Level3"]
 mesh_library = ExtResource( 1 )
 use_in_baked_light = true
 cell_size = Vector3( 1, 4, 1 )
@@ -51,8 +70,10 @@ __meta__ = {
 "_editor_floor_": Vector3( 0, 0, 0 )
 }
 
-[node name="GridMap4" type="GridMap" parent="."]
+[node name="Level4" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12, 0 )
+
+[node name="GridMap" type="GridMap" parent="Level4"]
 mesh_library = ExtResource( 1 )
 cell_size = Vector3( 1, 4, 1 )
 cell_center_x = false
@@ -66,8 +87,75 @@ __meta__ = {
 "_editor_floor_": Vector3( 0, 0, 0 )
 }
 
-[node name="GridMap5" type="GridMap" parent="."]
+[node name="CenterDoors" type="Spatial" parent="Level4"]
+
+[node name="Door1" parent="Level4/CenterDoors" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.9, 0, 6 )
+open_angle = -80.0
+opened = true
+
+[node name="Door2" parent="Level4/CenterDoors" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 0.9, 0, 6 )
+opened = true
+
+[node name="Door3" parent="Level4/CenterDoors" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -3.1, 0, -6 )
+open_angle = -80.0
+opened = true
+
+[node name="Door4" parent="Level4/CenterDoors" instance=ExtResource( 3 )]
+transform = Transform( -2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, -4.9, 0, -6 )
+opened = true
+
+[node name="Door5" parent="Level4/CenterDoors" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 4.9, 0, -6 )
+open_angle = -80.0
+opened = true
+
+[node name="Door6" parent="Level4/CenterDoors" instance=ExtResource( 3 )]
+transform = Transform( -2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, 3.1, 0, -6 )
+opened = true
+
+[node name="Door7" parent="Level4/CenterDoors" instance=ExtResource( 3 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 6, 0, 4.9 )
+open_angle = -80.0
+opened = true
+
+[node name="Door8" parent="Level4/CenterDoors" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 6, 0, 3.1 )
+opened = true
+
+[node name="Door9" parent="Level4/CenterDoors" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -6, 0, 3.1 )
+open_angle = -80.0
+opened = true
+
+[node name="Door10" parent="Level4/CenterDoors" instance=ExtResource( 3 )]
+transform = Transform( -1, 0, -2.62268e-07, 0, 1, 0, 2.62268e-07, 0, -1, -6, 0, 4.9 )
+opened = true
+
+[node name="TowerDoors" type="Spatial" parent="Level4"]
+
+[node name="Door1" parent="Level4/TowerDoors" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 12.45, 0, 10 )
+opened = true
+
+[node name="Door2" parent="Level4/TowerDoors" instance=ExtResource( 3 )]
+transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -10, 0, 12.45 )
+opened = true
+
+[node name="Door3" parent="Level4/TowerDoors" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -12.45, 0, -10 )
+opened = true
+
+[node name="Door4" parent="Level4/TowerDoors" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, -1.74846e-07, 0, 1, 0, 1.74846e-07, 0, 1, 10, 0, -12.45 )
+opened = true
+
+[node name="Level5" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 16, 0 )
+
+[node name="GridMap" type="GridMap" parent="Level5"]
 mesh_library = ExtResource( 1 )
 use_in_baked_light = true
 cell_size = Vector3( 1, 4, 1 )

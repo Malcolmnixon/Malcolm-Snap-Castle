@@ -8,6 +8,22 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Spatial",
+"class": "CastleDoor",
+"language": "GDScript",
+"path": "res://addons/malcolm-snap-castle/decorations/scripts/door.gd"
+}, {
+"base": "KinematicBody",
+"class": "CastleDoorBody",
+"language": "GDScript",
+"path": "res://addons/malcolm-snap-castle/decorations/scripts/door-body.gd"
+} ]
+_global_script_class_icons={
+"CastleDoor": "",
+"CastleDoorBody": ""
+}
+
 [application]
 
 config/name="Malcolm-Snap-Castle"
