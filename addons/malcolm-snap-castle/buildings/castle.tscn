@@ -55,19 +55,15 @@ opened = true
 
 [node name="Sconce1" parent="Level1/Lights" instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, 5 )
-lit = true
 
 [node name="Sconce2" parent="Level1/Lights" instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, -6 )
-lit = true
 
 [node name="Sconce3" parent="Level1/Lights" instance=ExtResource( 4 )]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 14, 0, -6 )
-lit = true
 
 [node name="Sconce4" parent="Level1/Lights" instance=ExtResource( 4 )]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 14, 0, 5 )
-lit = true
 
 [node name="Objects" type="Spatial" parent="Level1"]
 
@@ -135,19 +131,15 @@ opened = true
 
 [node name="Sconce1" parent="Level2/Lights" instance=ExtResource( 4 )]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2, 0, 14 )
-lit = true
 
 [node name="Sconce2" parent="Level2/Lights" instance=ExtResource( 4 )]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2, 0, 14 )
-lit = true
 
 [node name="Sconce3" parent="Level2/Lights" instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, 3 )
-lit = true
 
 [node name="Sconce4" parent="Level2/Lights" instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, -3 )
-lit = true
 
 [node name="Level3" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8, 0 )
@@ -197,21 +189,19 @@ opened = true
 
 [node name="Sconce1" parent="Level3/Lights" instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, 4 )
-lit = true
 
 [node name="Sconce2" parent="Level3/Lights" instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, -4 )
-lit = true
 
 [node name="Sconce3" parent="Level3/Lights" instance=ExtResource( 4 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 9, 0, 10 )
-lit = true
 
 [node name="Level4" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12, 0 )
 
 [node name="GridMap" type="GridMap" parent="Level4"]
 mesh_library = ExtResource( 1 )
+use_in_baked_light = true
 cell_size = Vector3( 1, 4, 1 )
 cell_center_x = false
 cell_center_y = false
@@ -291,13 +281,11 @@ opened = true
 
 [node name="Lights" type="Spatial" parent="Level4"]
 
-[node name="Sconce" parent="Level4/Lights" instance=ExtResource( 4 )]
+[node name="Sconce1" parent="Level4/Lights" instance=ExtResource( 4 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4, 0, 6 )
-lit = true
 
 [node name="Sconce2" parent="Level4/Lights" instance=ExtResource( 4 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4, 0, 6 )
-lit = true
 
 [node name="Level5" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 16, 0 )
