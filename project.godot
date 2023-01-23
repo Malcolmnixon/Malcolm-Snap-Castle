@@ -10,6 +10,16 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Spatial",
+"class": "CastleChest",
+"language": "GDScript",
+"path": "res://addons/malcolm-snap-castle/decorations/scripts/chest.gd"
+}, {
+"base": "Reference",
+"class": "CastleChestLid",
+"language": "GDScript",
+"path": "res://addons/malcolm-snap-castle/decorations/scripts/chest-lid.gd"
+}, {
+"base": "Spatial",
 "class": "CastleDoor",
 "language": "GDScript",
 "path": "res://addons/malcolm-snap-castle/decorations/scripts/door.gd"
@@ -18,10 +28,18 @@ _global_script_classes=[ {
 "class": "CastleDoorBody",
 "language": "GDScript",
 "path": "res://addons/malcolm-snap-castle/decorations/scripts/door-body.gd"
+}, {
+"base": "Spatial",
+"class": "CastleSconce",
+"language": "GDScript",
+"path": "res://addons/malcolm-snap-castle/decorations/scripts/sconce.gd"
 } ]
 _global_script_class_icons={
+"CastleChest": "",
+"CastleChestLid": "",
 "CastleDoor": "",
-"CastleDoorBody": ""
+"CastleDoorBody": "",
+"CastleSconce": ""
 }
 
 [application]
