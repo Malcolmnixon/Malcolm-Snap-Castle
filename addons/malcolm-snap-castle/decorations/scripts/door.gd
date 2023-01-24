@@ -40,7 +40,16 @@ func _ready():
 # Called when the opened property is changed
 func _set_opened(new_value : bool) -> void:
 	# Save and update the value
+	var old_opened := opened
 	opened = new_value
+
+	# Fire the changed event
+	if opened and not old_opened:
+		emit_signal("door_opened")
+	elif not opened and old_opened:
+		emit_signal("door_closed")
+
+	# Update the state
 	if is_inside_tree():
 		_update_opened()
 

@@ -29,27 +29,21 @@ __meta__ = {
 
 [node name="Door1" parent="Level1/Doors" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -12.45 )
-opened = true
 
 [node name="Door2" parent="Level1/Doors" instance=ExtResource( 3 )]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2, 0, -3.55 )
-opened = true
 
 [node name="Door3" parent="Level1/Doors" instance=ExtResource( 3 )]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2, 0, 12.45 )
-opened = true
 
 [node name="Door4" parent="Level1/Doors" instance=ExtResource( 3 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -8.45, 0, -10 )
-opened = true
 
 [node name="Door5" parent="Level1/Doors" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 2, 0, 11.55 )
-opened = true
 
 [node name="Door6" parent="Level1/Doors" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 2, 0, 3.55 )
-opened = true
 
 [node name="Lights" type="Spatial" parent="Level1"]
 
@@ -68,7 +62,7 @@ transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 14, 0, 
 [node name="Objects" type="Spatial" parent="Level1"]
 
 [node name="Chest" parent="Level1/Objects" instance=ExtResource( 5 )]
-transform = Transform( 0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, -16.7, 0, 11.3 )
+transform = Transform( 0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, -16.7, 0.25, 11.3 )
 
 [node name="Level2" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0 )
@@ -92,40 +86,31 @@ __meta__ = {
 
 [node name="LargeDoorLeft" parent="Level2/Doors" instance=ExtResource( 2 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, 0, 14 )
-opened = true
 
 [node name="LargeDoorRight" parent="Level2/Doors" instance=ExtResource( 2 )]
 transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 1, 0, 14 )
 open_angle = -80.0
-opened = true
 
 [node name="Door1" parent="Level2/Doors" instance=ExtResource( 3 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.45, 0, 6 )
-opened = true
 
 [node name="Door2" parent="Level2/Doors" instance=ExtResource( 3 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -8.45, 0, -6 )
-opened = true
 
 [node name="Door3" parent="Level2/Doors" instance=ExtResource( 3 )]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -14, 0, -11.55 )
-opened = true
 
 [node name="Door4" parent="Level2/Doors" instance=ExtResource( 3 )]
 transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -11.55, 0, 10 )
-opened = true
 
 [node name="Door5" parent="Level2/Doors" instance=ExtResource( 3 )]
 transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 8.45, 0, -2 )
-opened = true
 
 [node name="Door6" parent="Level2/Doors" instance=ExtResource( 3 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 11.55, 0, -10 )
-opened = true
 
 [node name="Door7" parent="Level2/Doors" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.9, 0, -8.45 )
-opened = true
 
 [node name="Lights" type="Spatial" parent="Level2"]
 
@@ -163,27 +148,21 @@ __meta__ = {
 
 [node name="Door1" parent="Level3/Doors" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -12.45 )
-opened = true
 
 [node name="Door2" parent="Level3/Doors" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 3.55 )
-opened = true
 
 [node name="Door3" parent="Level3/Doors" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 11.55 )
-opened = true
 
 [node name="Door4" parent="Level3/Doors" instance=ExtResource( 3 )]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.45, 0, 10 )
-opened = true
 
 [node name="Door5" parent="Level3/Doors" instance=ExtResource( 3 )]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -6, 0, 12.45 )
-opened = true
 
 [node name="Door6" parent="Level3/Doors" instance=ExtResource( 3 )]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -6, 0, -11.55 )
-opened = true
 
 [node name="Lights" type="Spatial" parent="Level3"]
 
@@ -219,65 +198,51 @@ __meta__ = {
 [node name="Door1" parent="Level4/CenterDoors" instance=ExtResource( 3 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.9, 0, 6 )
 open_angle = -80.0
-opened = true
 
 [node name="Door2" parent="Level4/CenterDoors" instance=ExtResource( 3 )]
 transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 0.9, 0, 6 )
-opened = true
 
 [node name="Door3" parent="Level4/CenterDoors" instance=ExtResource( 3 )]
 transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -3.1, 0, -6 )
 open_angle = -80.0
-opened = true
 
 [node name="Door4" parent="Level4/CenterDoors" instance=ExtResource( 3 )]
 transform = Transform( -2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, -4.9, 0, -6 )
-opened = true
 
 [node name="Door5" parent="Level4/CenterDoors" instance=ExtResource( 3 )]
 transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 4.9, 0, -6 )
 open_angle = -80.0
-opened = true
 
 [node name="Door6" parent="Level4/CenterDoors" instance=ExtResource( 3 )]
 transform = Transform( -2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, 3.1, 0, -6 )
-opened = true
 
 [node name="Door7" parent="Level4/CenterDoors" instance=ExtResource( 3 )]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 6, 0, 4.9 )
 open_angle = -80.0
-opened = true
 
 [node name="Door8" parent="Level4/CenterDoors" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 6, 0, 3.1 )
-opened = true
 
 [node name="Door9" parent="Level4/CenterDoors" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -6, 0, 3.1 )
 open_angle = -80.0
-opened = true
 
 [node name="Door10" parent="Level4/CenterDoors" instance=ExtResource( 3 )]
 transform = Transform( -1, 0, -2.62268e-07, 0, 1, 0, 2.62268e-07, 0, -1, -6, 0, 4.9 )
-opened = true
 
 [node name="TowerDoors" type="Spatial" parent="Level4"]
 
 [node name="Door1" parent="Level4/TowerDoors" instance=ExtResource( 3 )]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 12.45, 0, 10 )
-opened = true
 
 [node name="Door2" parent="Level4/TowerDoors" instance=ExtResource( 3 )]
 transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -10, 0, 12.45 )
-opened = true
 
 [node name="Door3" parent="Level4/TowerDoors" instance=ExtResource( 3 )]
 transform = Transform( 1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -12.45, 0, -10 )
-opened = true
 
 [node name="Door4" parent="Level4/TowerDoors" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, -1.74846e-07, 0, 1, 0, 1.74846e-07, 0, 1, 10, 0, -12.45 )
-opened = true
 
 [node name="Lights" type="Spatial" parent="Level4"]
 
