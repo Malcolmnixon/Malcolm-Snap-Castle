@@ -19,6 +19,9 @@ export var open_angle : float = 120.0
 ## Chest opened state
 export var opened : bool = false setget _set_opened
 
+## Generic user game data (e.g for locked or key-name)
+export var user_data = {}
+
 
 # Tween for moving chest
 var _tween : SceneTreeTween

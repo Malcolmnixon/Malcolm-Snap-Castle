@@ -22,6 +22,9 @@ export var opened : bool = false setget _set_opened
 ## Door enabled state
 export var enabled : bool = true setget _set_enabled
 
+## Generic user game data (e.g for locked or key-name)
+export var user_data = {}
+
 
 # Tween for moving door
 var _tween : SceneTreeTween
